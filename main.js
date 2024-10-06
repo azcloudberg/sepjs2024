@@ -292,7 +292,7 @@ let number1 = 2.957738;
 // console.log(number1.toPrecision(3));
 
 
-// isNaN()
+// isNaN() //Not a number
 // console.log(isNaN(number1)); //false
 
 
@@ -397,26 +397,276 @@ let data = "Hello world";
 // Arrays in JS
 
 // let usersName = "Raghav, Anil, Tarun, Mahesh, Hemant";
-let userName = ['Anil','Raghav','Tarun','Mahesh','Hemant'];
-console.log(userName);
-// console.log(userName[5]);
+// let userName = ['Anil','Raghav','Tarun','Mahesh','Hemant'];
+// console.log(userName);
+// // console.log(userName[5]);
 
-// userName[0] = "Abhijit";
+// // userName[0] = "Abhijit";
+// // console.log(userName);
+
+// // userName.push('Abhijit');
+// // console.log(userName);
+// // console.log(userName[5]);
+
+
+// let lastUserName = userName.pop();
+// console.log(lastUserName);
+
+
+// // console.log(userName.shift());
+
+// userName.unshift('Aman');
 // console.log(userName);
 
-// userName.push('Abhijit');
-// console.log(userName);
-// console.log(userName[5]);
+
+// let age = [42,28,23,21,67];
+
+// // age[2]; //23
+// // age[3] = 58;
+
+// age[5] = 61;
+// console.log(age[5]);
+// console.log(age);
+
+// let remainingAge = age.slice(1,3); //returns a copy of a portiono of an array
+// console.log(remainingAge);
+
+// let anotherAge = [60,12,10,23];
+
+// let allAges = remainingAge.concat(anotherAge);
+// console.log(allAges);
+
+// console.log(age.sort());
+// console.log(age.reverse());
+
+// // Objects in JavaScript
+
+// // 0:1,1:4,2:6,3:2,4:5
+
+// let person = {
+//     name: "Deepak",
+//     userName: "deepak01",
+//     email: "deepak@gmail.com",
+//     age: 42,
+//     mobile: 982983791,
+//     greet: function () {
+//         console.log(`Hi everyone!, This is ${this.name}` )
+//     }
+// }
+
+// person.greet();
+
+// console.log(person.name); //dot notation
+// console.log(person['email']); //bracket notation
 
 
-let lastUserName = userName.pop();
-console.log(lastUserName);
+// person.age = 32;
+// console.log(person.age);
+// person['name'] = "Sachin";
+// console.log(person.name);
 
 
-// console.log(userName.shift());
+// person.gender = "Male";
+// console.log(person)
 
-userName.unshift('Aman');
-console.log(userName);
+// person.hello = function () {
+//     console.log("Hello");
+// }
+
+// person.hello();
+
+
+// delete person.gender;
+
+// console.log(person)
+
+
+
+let car = {
+    brand: "Toyota",
+    model: "Camry",
+    Owner: {
+        name: "Dharmesh",
+        aadhar: 74829293738291,
+        age: 88,
+        mobile: 929321134
+    }
+};
+
+// console.log(car.Owner.aadhar);
+
+// console.log(Object.keys(car['Owner']));
+// console.log(Object.values(car['Owner']));
+// console.log(Object.entries(car));
+// console.log(car.hasOwnProperty('Owner'));
+// console.log(car['Owner'].hasOwnProperty('email'));
+
+// Control Flow Statements in JS
+
+// let voter = {
+//     name: "Pranay",
+//     age: 17,
+//     unique_voter_id: 667291912,
+//     phone: 7829030201
+// }
+
+// let personAge = voter.age;
+
+// if (personAge >= 18){
+//     console.log(`${voter.name} is eligible to vote`);
+// }
+// else{
+//     console.log(`${voter.name} is not eligible to vote`);
+// }
+
+
+// Switch Statements
+
+// let fruits = "Pineapple";
+
+// switch (fruits) {
+//     case "apple":
+//         console.log("Hi I am Apple");
+//         break;
+//     case "Orange":
+//         console.log("Hi I am Orange");
+//         break;
+//     case "Pineapple":
+//         console.log("Hi Pineapple");
+//         break;
+//     default:
+//         console.log("Invalid Input");
+// }
+
+
+
+// console.log("1")
+// console.log("2")
+// console.log("3")
+// console.log("4")
+// console.log("5")
+// console.log("6")
+// console.log("7")
+// console.log("8")
+// console.log("9")
+// console.log("10")
+
+
+// for loop
+
+// let learners = ['Hemant', 'Arya','Soni', 'Mayank', 'Abhishek','Sibasis'];
+
+// for (let i=0; i<learners.length; i++)
+// {
+//     console.log(learners[i]);
+// }
+
+// for(let a = 1; a<=100; a++)
+// {
+//     console.log(a);
+// }
+
+// let i =0;
+
+// while (i < 10)
+// {
+//     console.log(i);
+//     i++;
+// }
+
+
+// let i = 1
+// do {
+    // console.log(i);
+// i++;
+// }while (i<6)
+
+
+let voter = {
+    name: "Pranay",
+    age: 17,
+    unique_voter_id: 667291912,
+    phone: 7829030201
+}
+
+// for (let key in voter) {
+    //     console.log(key + ": "+ voter[key])
+    // }
+
+    
+    
+// let learners = ['Hemant','Arya','Soni', 'Mayank', 'Abhishek','Sibasis'];
+// for (let i of learners)
+// {
+//     console.log(i);
+// }
+
+// learners.forEach(function(learner, index){
+//     console.log(learner, index);
+// });
+
+let numbers = [1,2,3,4,5,6];
+numbers.forEach(function(value,index, array){
+    array[index] = value * 4;
+})
+
+console.log(numbers);
+
+
+const array2d = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+];
+array2d.forEach(function(row){
+    row.forEach(function(value){
+        console.log(value);
+    })
+})
+
+// function sum(a,b){
+//     let result = a + b;
+//     return result;
+// }
+function sub(a,b){
+    let result = a - b;
+    return result;
+}
+
+// let funResult = sum(100,4242);
+// let funResult = sub(100,4242);
+// console.log(funResult);
+
+
+// const sum = (a,b) => {
+//     return a+b
+// }
+
+// let funResult = sum(100,4242);
+// console.log(funResult)
+
+
+// const square = (num) => num*num;
+
+// console.log(square(4));
+
+let age  = 17
+
+if(age >=18)
+{
+    console.log("Good to go");
+}
+else{
+    console.log("Not eligible");
+}
+
+let resultHere =  (age >= 18) ? "You are good to go" :  "Not eligible";
+
+
+console.log(resultHere);
+
+
+
 
 
 

@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Day 1 JS</title>
+    <title>Mood Tracker</title>
 </head>
 
 <body>
-    <h1>Welcome to JS Class</h1>
+    <h1 id="title">Mood Tracker</h1>
+    <select id="moodSelect">
+        <option value="">Select your mood</option>
+        <option value="happy">Happy</option>
+        <option value="sad">Sad</option>
+        <option value="angry">Angry</option>
+        <option value="excited">Excited</option>
+        <option value="bored">Bored</option>
+    </select>
+    <button onclick="trackMood()">Track Mood</button>
+    <p id="result">Result:</p>
 </body>
 <script src="main.js"></script>
-    <script>
-        // console.log("Hi this javascript!");
-    </script>
+    <script src="demo.js"></script>
 </html>
